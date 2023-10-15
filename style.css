@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/* Base Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 400;
+    /* 1.6*10 = 16px */
+    font-size: 1.6rem;
+    color: whitesmoke;
+}
+
+h1,
+h2,
+p {
+
+    margin: 16px 0;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 36px;
+}
+
+h2 {
+    font-weight: 800;
+    font-size: 24px;
+}
+
+p {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    margin: auto;
+}
+
+section {
+    padding: 100px 0;
+}
+
+.mobile-menu {
+    display: none; /* Menyembunyikan menu hamburger pada tampilan desktop */
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  /* Tampilan Responsif */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none; /* Menyembunyikan menu di tampilan mobile */
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 20px 0;
+      z-index: 1;
+      border border-radius: 20px;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .mobile-menu {
+      display: block; /* Menampilkan menu hamburger di tampilan mobile */
+      cursor: pointer;
+    }
+    
+    .mobile-menu.active .bar:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+  
+    .mobile-menu.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .mobile-menu.active .bar:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  }
+  
+
+
+/* Hero Section */
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url('img/bg-weboender.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: whitesmoke;
+}
+
+.logo h1 {
+    font-size: 32px;
+    color: #2a48aa ;
+    margin: 0;
+}
+
+nav {
+    padding: 2% 8%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav box-icon {
+    display: none;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+nav ul li a:hover {
+    color: #2a48aa;
+    transition: .5s ease-in-out;
+}
+
+.header-content {
+    width: 50%;
+    position: relative;
+    top: 16%;
+    left: 8%;
+}
+
+form {
+    margin: 24px 0;
+}
+
+input {
+    font-size: 18px;
+}
+
+input[type=text],
+input[type=email] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 12px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+input[type=submit] {
+    width: 50%;
+    background-color: #2a48aa;
+    color: #fff;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 15px;
+}
+
+input::placeholder {
+    font-size: 13px;
+    color: #ccc;
+}
+
+/* About Section */
+.about2 {
+    background-color: rgb(248, 248, 248);
+    color: #222;
+}
+
+.about2-left {
+    flex-basis: 50%;
+}
+
+.about2-right {
+    flex-basis: 50%;
+}
+
+.about2 .card {
+    padding: 30px 80px;
+    color: #222;
+    background-color: #DCDCDC;
+    text-align: center;
+    margin: 10px;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+.card{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5;
+}
+
+.card1 {
+    background-image: url(img/html-avatar.png);
+}
+.card2 {
+    background-image: url(img/css-avatar.png);
+}
+.card3 {
+    background-image: url(img/js-avatar\).png);
+}
+.card4 {
+    background-image: url(img/php-avatar.png);
+}
+
+.card5 {
+    background-image: url(img/bootstrap-avatar\ \(1\).png);
+}
+.card6 {
+    background-image: url(img/phyton-avatar\ \(1\).png);
+}
+.card7 {
+    background-image: url(img/Java-avatar.png);
+}
+.card8 {
+    background-image: url(img/mongodb-avatar.png);
+}
+
+
+
+/* Testimony Carousel */
+
+body{
+    min-height: 100hv;
+}
+
+::-webkit-scrollbar {
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 25px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #6e93f7;
+    border-radius: 25px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4070f4;
+  }
+  
+  .container {
+    display: flex;
+    gap: 12px;
+    max-width: 100%;
+    height: 500px;
+    background: #4070f4;
+    padding: 30px;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    scroll-padding: 30px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  }
+  .container .testimony {
+    display: flex;
+    flex: 0 0 50%;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 12px;
+    background: #fff;
+    scroll-snap-align: start;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  }
+  .testimony .image {
+    height: 150px;
+    width: 150px;
+    padding: 4px;
+    background: #4070f4;
+    border-radius: 50%;
+  }
+  .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+  }
+  .testimony h2 {
+    margin-top: 25px;
+    color: #333;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .card p {
+    margin-top: 4px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    text-align: center;
+  }
+
+/* Contact */
+.contact .row {
+    justify-content: center;
+}
+
+.contact form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact form input {
+    width: 50%;
+}
+
+.contact textarea {
+    width: 50%;
+    height: 150px;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    font-size: 1.3rem;
+    resize: none;
+    color: #ccc;
+    margin: 12px 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Footer */
+footer {
+    height: 80px;
+    background-color: #222;
+    color: #fff;
+    line-height: 80px;
+    text-align: center;
+}
+
+
+
+/* Media Queries */
+
+@media only screen and (max-width:768px) {
+
+    .row{
+        flex-direction: column;
+    }
+    nav {
+        flex-direction: column;
+        position: relative;
+    }
+
+    nav box-icon {
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 32px;
+    }
+
+    nav ul {
+        background: whitesmoke;
+        display: none;
+    }
+
+    .showmenu {
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        padding: 2% 0;
+    }
+
+    nav ul li a {
+        color: #222;
+    }
+
+    /* header content */
+    .header-content{
+        width: 100%;
+        top:16%;
+        left:0;
+        text-align: center;
+        padding:0 8px;
+    }
+    input[type=text],
+    input[type=email],
+    input[type=submit]{
+        width: 80%;
+        margin:12px auto;
+    }
+
+    .progress-bar{
+        display: none;
+    }
+    .process-content{
+        margin-top: 20px;
+    }
+    .process .box1,
+    .process .box2,
+    .process .box3{
+        text-align: center;
+    }
+
+    /* Testimony */
+    .testimony .test{
+        margin:16px 0;
+    }
+
+    .contact form input,
+    .contact textarea{
+        width: 100%;
+    }
+}
